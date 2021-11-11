@@ -10,7 +10,7 @@ source:
   sha256: a212a244b0a6022a61657746c8120ac9b6db83432371b345154075eb8faceb61
 
 build:
-  number: 2
+  number: 3
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv --no-cache-dir"
   missing_dso_whitelist:  # [win]
     - '*\SHLWAPI.dll'     # [win]
