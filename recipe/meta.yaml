@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 246a98a63e61f54a15d16105cb15488c5670734df41e86c7af0d5d9c0af240b9
+  patches:
+    - patches/0001-Fix-console-scripts-in-pyproject.toml.patch
 
 build:
   number: 0
