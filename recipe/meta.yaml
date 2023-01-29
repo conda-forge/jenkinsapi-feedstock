@@ -1,18 +1,20 @@
 {% set name = "jenkinsapi" %}
-{% set version = "0.3.11" %}
+{% set version = "0.3.13" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a212a244b0a6022a61657746c8120ac9b6db83432371b345154075eb8faceb61
+  sha256: 246a98a63e61f54a15d16105cb15488c5670734df41e86c7af0d5d9c0af240b9
+  patches:
+    - patches/0001-Fix-console-scripts-in-pyproject.toml.patch
 
 build:
-  number: 5
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv --no-cache-dir"
-  missing_dso_whitelist:  # [win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv --no-cache-dir
+  missing_dso_whitelist:   # [win]
     - '*\SHLWAPI.dll'     # [win]
 
 requirements:
@@ -20,6 +22,7 @@ requirements:
     - pip
     - pbr
     - python
+    - flit-core >=3.2,<4
   run:
     - python
     - pytz >=2014.4
@@ -31,8 +34,7 @@ test:
     - jenkinsapi
     - jenkinsapi.command_line
     - jenkinsapi.utils
-    - jenkinsapi_tests
-  commands:                      # [unix]
+  commands:   # [unix]
     - jenkins_invoke --help      # [unix]
     - jenkinsapi_version --help  # [unix]
 
