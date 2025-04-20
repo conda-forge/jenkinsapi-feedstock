@@ -39,12 +39,12 @@ test:
     - jenkinsapi_version --help  # [unix]
 
 about:
-  home: https://github.com/salimfadhley/jenkinsapi
+  home: https://github.com/pycontribs/jenkinsapi
   license: MIT
   license_family: MIT
-  license_file: license.txt
+  license_file: LICENSE
   summary: A Python API for accessing resources on a Jenkins continuous-integration server.
-  doc_url: https://jenkinsapi.readthedocs.org/
+  doc_url: https://jenkinsapi.readthedocs.io/
 
 extra:
   recipe-maintainers:
