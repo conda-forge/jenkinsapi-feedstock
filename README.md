@@ -3,13 +3,13 @@ About jenkinsapi-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jenkinsapi-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/salimfadhley/jenkinsapi
+Home: https://github.com/pycontribs/jenkinsapi
 
 Package license: MIT
 
 Summary: A Python API for accessing resources on a Jenkins continuous-integration server.
 
-Documentation: https://jenkinsapi.readthedocs.org/
+Documentation: https://jenkinsapi.readthedocs.io/
 
 Current build status
 ====================

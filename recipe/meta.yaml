@@ -1,18 +1,16 @@
 {% set name = "jenkinsapi" %}
-{% set version = "0.3.13" %}
+{% set version = "0.3.14" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 246a98a63e61f54a15d16105cb15488c5670734df41e86c7af0d5d9c0af240b9
-  patches:
-    - patches/0001-Fix-console-scripts-in-pyproject.toml.patch
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 1be5a3d60bb97b8fd5a9d9d4477e2201e07e4725a7d42c0eb16846bb879e4b97
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv --no-cache-dir
   missing_dso_whitelist:   # [win]
     - '*\SHLWAPI.dll'     # [win]
@@ -39,12 +37,12 @@ test:
     - jenkinsapi_version --help  # [unix]
 
 about:
-  home: https://github.com/salimfadhley/jenkinsapi
+  home: https://github.com/pycontribs/jenkinsapi
   license: MIT
   license_family: MIT
-  license_file: license.txt
+  license_file: LICENSE
   summary: A Python API for accessing resources on a Jenkins continuous-integration server.
-  doc_url: https://jenkinsapi.readthedocs.org/
+  doc_url: https://jenkinsapi.readthedocs.io/
 
 extra:
   recipe-maintainers:
