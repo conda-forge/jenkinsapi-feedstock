@@ -20,7 +20,7 @@ requirements:
     - pip
     - pbr
     - python
-    - flit-core >=3.2,<4
+    - hatchling
   run:
     - python
     - pytz >=2014.4
