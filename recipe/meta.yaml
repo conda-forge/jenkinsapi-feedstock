@@ -1,5 +1,5 @@
 {% set name = "jenkinsapi" %}
-{% set version = "0.3.16" %}
+{% set version = "0.3.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5ff167daeea5faa7fb66d463ec1929c06d2f8df7880ff09d2d0f6b2c58d4424b
+  sha256: 63333ecb6b1684433e34ade0d205c87dfcc378163cfd02428078620973315790
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv --no-cache-dir
   missing_dso_whitelist:   # [win]
     - '*\SHLWAPI.dll'     # [win]
