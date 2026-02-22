@@ -25,7 +25,6 @@ requirements:
     - python
     - pytz >=2014.4
     - requests >=2.3.0
-    - six >=1.10.0
 
 test:
   imports:
