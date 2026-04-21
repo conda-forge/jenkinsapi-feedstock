@@ -1,5 +1,5 @@
 {% set name = "jenkinsapi" %}
-{% set version = "0.3.21" %}
+{% set version = "0.3.23" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e3b512e00e1188c6a391570f51c98aa60e9b420d285731fba774ac09f8d5f4bf
+  sha256: c3d9fc3293f0d0248cd018f5b3317d751449f0c0d4cc23cb3d1d60a830acb61f
 
 build:
   number: 0
